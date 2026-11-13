@@ -6,6 +6,8 @@ Suite Teardown  Close Browser
 *** Test Cases ***
 When counter has a nonzero value and it is reset the value becomes zero
     Go To  ${HOME_URL}
+    Fill Text  input[name="value"]  0
+    Click  button >> text=Aseta
     Click  button >> text=Paina
     Click  button >> text=Paina
     Get Text  body  !=  nappia painettu 0 kertaa
